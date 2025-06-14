@@ -1,0 +1,152 @@
+/* Resetando margens e espaçamentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cor de fundo e fonte base */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #4c5baf;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo geral do container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção de Perfil */
+.perfil {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4c5baf;
+}
+
+.bio {
+    margin-top: 20px;
+}
+
+.bio h2 {
+    color: #36121a;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.bio p {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.5;
+}
+
+/* Estilo para as listas de habilidades */
+h2 {
+    color: #4c5eaf;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+ol {
+    margin: 15px 0;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+/* Botão de Contato */
+button {
+    background-color: #5e4caf;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4546a0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .perfil img {
+        width: 120px;
+        height: 120px;
+    }
+
+    header nav a {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav a {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    .perfil img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .bio h2 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}

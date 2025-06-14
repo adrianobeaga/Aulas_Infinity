@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="style4.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        /* Estilo do cabeçalho de navegação */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        /* Estilo para a galeria de imagens e suas descrições */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .description-box {
+            background-color: #fff;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            color: #666;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho de navegação -->
+    <nav>
+        <a href="#home">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Conheça meus Projetos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <header>
+        <h1>Formulário de Contato</h1>
+    </header>
+
+    <div class="container">
+        <!-- Seção de Projetos -->
+        <section id="projetos">
+            <h2>Meus Projetos</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <a href="projeto1.html">
+                        <img src="projeto1.jpg" alt="Projeto 1">
+                    </a>
+                    <div class="description-box">
+                        Lógica em Python: <br>Projeto em Python e sua lógica de programação.
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <a href="projeto2.html">
+                        <img src="projeto2.jpg" alt="Projeto 2">
+                    </a>
+                    <div class="description-box">
+                        Descrição do Projeto 2: <br>Uma breve explicação sobre o segundo projeto.
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <a href="projeto3.html">
+                        <img src="projeto3.jpg" alt="Projeto 3">
+                    </a>
+                    <div class="description-box">
+                        Descrição do Projeto 3: <br>Uma breve explicação sobre o terceiro projeto.
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <a href="projeto4.html">
+                        <img src="projeto4.jpg" alt="Projeto 4">
+                    </a>
+                    <div class="description-box">
+                        Descrição do Projeto 4: <br>Uma breve explicação sobre o quarto projeto.
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <a href="projeto5.html">
+                        <img src="projeto5.jpg" alt="Projeto 5">
+                    </a>
+                    <div class="description-box">
+                        Descrição do Projeto 5: <br>Uma breve explicação sobre o quinto projeto.
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <a href="projeto6.html">
+                        <img src="projeto6.jpg" alt="Projeto 6">
+                    </a>
+                    <div class="description-box">
+                        Descrição do Projeto 6: <br>Uma breve explicação sobre o sexto projeto.
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <a href="projeto7.html">
+                        <img src="projeto7.jpg" alt="Projeto 7">
+                    </a>
+                    <div class="description-box">
+                        Descrição do Projeto 7: <br>Uma breve explicação sobre o sétimo projeto.
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <a href="projeto8.html">
+                        <img src="projeto8.jpg" alt="Projeto 8">
+                    </a>
+                    <div class="description-box">
+                        Descrição do Projeto 8: <br>Uma breve explicação sobre o oitavo projeto.
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <a href="projeto9.html">
+                        <img src="projeto9.jpg" alt="Projeto 9">
+                    </a>
+                    <div class="description-box">
+                        Descrição do Projeto 9: <br>Uma breve explicação sobre o nono projeto.
+                    </div>
+                </div>
+            </div>
+        </section> 
+    </div>
+
+</body>
+</html>
