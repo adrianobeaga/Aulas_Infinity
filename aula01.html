@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <link rel="stylesheet" href="styles.css">
+<head>
+    <title>Formulário de Cadastro</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cadastro de Usuário</h1>
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmar_senha">Confirmar Senha:</label>
+                <input type="password" id="confirmar_senha" name="confirmar_senha" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pais">País:</label>
+                <select id="pais" name="pais" required>
+                    <option value="">Selecione seu país</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="portugal">Paraguai</option>
+                    <option value="eua">Estados Unidos</option>
+                    <option value="canada">África do Sul</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Sua Mensagem / Descrição:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Fala aí! Digita né! hahaha"></textarea>
+            </div>
+
+            <div class="form-group button-group">
+                <button type="submit">Cadastrar</button>
+                <button type="reset" class="reset-button">Limpar Campos</button>
+            </div>
+    </div>
+</body>
+</html>
