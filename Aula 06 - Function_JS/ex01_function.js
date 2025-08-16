@@ -1,4 +1,4 @@
 function saudacao() {
-    console.log()
+    console.log("Olá Bruno!")
 }
-console.log("Olá Bruno")
+saudacao();
