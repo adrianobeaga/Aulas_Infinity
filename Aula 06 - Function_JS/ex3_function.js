@@ -1,5 +1,4 @@
-
-function myName() {
-    console.log(myName)
+function myName(name) {
+    console.log(name)
 }
-console.log("Adriano")
+myName("Adriano")
