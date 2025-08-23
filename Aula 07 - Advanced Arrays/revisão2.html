@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Funções com Retornos
+        const produtos = [
+            "Café",
+            "Arroz",
+            "Feijão",
+            "Azeite de Oliva",
+            "Pão",
+            "Leite",
+            "Queijo",
+            "Manteiga",
+            "Macarrão",
+            "Chocolate"
+        ];
+
+        // Funcao com return (Específica, filtra somente pela letra A)
+        function filtrarProdutosPelaLetraA(produtos) {
+            const produtosFiltrados = []
+
+            for (const produto of produtos) {
+                if (produto.includes('a')) {
+                    produtosFiltrados.push(produto)
+                }
+            }
+
+            return produtosFiltrados
+        }
+
+        const filtro = filtrarProdutosPelaLetraA(produtos)
+        console.log(produtos)
+        console.log(filtro)
+
+        function filtrarProdutos(produtos, filtro) {
+            const produtosFiltrados = []
+
+            for (const produto of produtos) {
+                if (produto.includes(filtro)) {
+                    produtosFiltrados.push(produto)
+                }
+            }
+
+            return produtosFiltrados
+        }
+
+        console.log(produtos)
+        console.log(filtrarProdutos(produtos, 'Ma'))
+ 
+    </script>
+</body>
+</html>
