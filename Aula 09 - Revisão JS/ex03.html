@@ -1,0 +1,42 @@
+/*
+Ex03. Faça um programa que peça dois numeros em uma página HTML, calcule o produto entre eles (multiplicação) e mostre o resultado dentro de uma div.
+*/<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soma</title>
+  </head>
+  <body>
+    <h1>Multiplicação de Dois Numeros</h1>
+
+    <div>
+        <p id="pResultado"></p>
+    </div>
+
+    <div>
+      <label for="numero1"> Numero 1 </label> <br />
+      <input type="number" id="numero1" />
+    </div>
+
+    <div>
+      <label for="numero2"> Numero 2 </label> <br />
+      <input type="number" id="numero2" />
+    </div>
+
+    <button onclick="handleCalcular()">Calcular</button>
+
+    <script>
+      function handleCalcular() {
+        const numero1 = Number(document.getElementById("numero1").value);
+        const numero2 = Number(document.getElementById("numero2").value);
+        
+        const multiplicação = numero1 * numero2;
+        
+        let presultado = document.getElementById("pResultado")
+        presultado.innerHTML += `A soma dos numeros é ${multiplicação}` 
+
+      }
+    </script>
+  </body>
+</html>

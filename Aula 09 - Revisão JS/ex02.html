@@ -1,0 +1,37 @@
+// Ex02. Faça um programa que peça o peso e a altura de uma pessoa em um HTML,
+calcule o seu IMC e mostre-o em um alert.
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMC</title>
+  </head>
+  <body>
+    <h1>Calcular IMC</h1>
+
+    <div>
+      <label for="peso">peso</label>
+      <input type="number" id="peso" />
+    </div>
+
+    <div>
+      <label for="altura">altura</label>
+      <input type="number" id="altura" />
+    </div>
+
+    <button onclick="calcularIMC()">Resultado IMC</button>
+
+    <script>
+      function calcularIMC() {
+        const peso = Number(document.getElementById("peso").value);
+        const altura = Number(document.getElementById("altura").value);
+
+        const calculoIMC = peso / (altura * altura);
+
+        alert(`O resultado do IMC é ${calculoIMC.toFixed(2)}`);
+      }
+    </script>
+  </body>
+</html>
