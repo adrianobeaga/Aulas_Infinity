@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex01</title>
+  </head>
+  <body>
+    <h1>Nome do usuário</h1>
+
+    <!--
+    Ex01. Faça um programa que peça o nome do usuário 
+    e mostre uma mensagem de saudação em negrito. 
+    -->
+    <input type="text" id="nome" placeholder="Digite seu nome" /> <br />
+    <button onclick="mostrarSaudacao()">Mostrar</button>
+
+    <p id="mensagem"></p>
+
+    <script>
+      function mostrarSaudacao() {
+        // 1. Pegar o input
+        const inputNome = document.querySelector("#nome");
+        // 2. Pegar o nome
+        const nome = inputNome.value;
+        // 3. Pegar o paragrafo de mensagem
+        const pMensagem = document.querySelector("#mensagem");
+        // 4. Mostrar a mensagem
+        pMensagem.textContent = `Olá ${nome} seja bem vindo!` ;
+        // 5. Estilizar em Negrito (com tag ou com css)
+        pMensagem.style.fontWeight = "700";
+      }
+    </script>
+  </body>
+</html>
