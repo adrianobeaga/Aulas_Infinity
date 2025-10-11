@@ -4,26 +4,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Gerenciamento de Produtos </title>
+    <title>Gerenciamento de Produtos</title>
 
     <style>
-        table {
-            width: 50%;
-        }
+      table {
+        width: 50%;
+      }
 
-        table, tr, td, th {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
+      table,
+      tr,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
 
-        .input {
-            display: flex;
-            max-width: 300px;
-            flex-direction: column;
-            margin-bottom: 8px;
-        }
+      .input {
+        display: flex;
+        max-width: 300px;
+        flex-direction: column;
+        margin-bottom: 8px;
+      }
     </style>
-
   </head>
   <body>
     <h1>Gerenciamento de Produtos</h1>
@@ -46,7 +48,7 @@
       </div>
       <div class="input">
         <label for="preco">Preço</label>
-        <input type="number" id="preco" name="preco" />
+        <input type="number" id="preco" name="preco" step="0.01" />
       </div>
 
       <button type="submit">Cadastrar</button>
@@ -71,33 +73,68 @@
         </tr>
       </tbody>
     </table>
-    
+
     <script>
-        function handleCadastrarProduto(event) {
-            // 1. Previne o Comportamento Padrão
-            const form = event.target;
-            // 2. Busca o Formulario
-            const produto = {
-                id: produtos-form(),
-                nome: form.nome.value,
-                categoria: form.categoria.value,
-            }
-            // 3. Pega os valores dos inputs
-            function catchValores(){
-                const inputValores = document.getElementById(input)
-            }
-            // 4. Cria uma linha "tr"
-        
-            // 5. Cria as celulas "td" e adiciona na linha
-
-            // 6. Busca a tag "tbody" e adiciona a linha
-        }
-
-        // Busca o Formulário "form"
-
-        // Adiciona o evento de Submit
+      function handleCadastrarProduto(event) {
+        // 1. Previne o Comportamento Padrão
         event.preventDefault();
-        // Exemplo: form.addEventListener('submit', handleCadastrarProduto)
+
+        // 2. Busca o Formulario
+        // const form = document.getElementById("produtos-form");
+        const form = event.target;
+
+        // 3. Pega os valores dos inputs
+        const produto = {
+          nome: form.nome.value,
+          categoria: form.categoria.value,
+          preco: Number(form.preco.value),
+        };
+
+        // 4. Busca a tag "tbody"
+        const tableData = document.querySelector("#produtos-table tbody");
+
+        // tableData.innerHTML += `
+        //     <tr>
+        //         <td>${produto.nome}</td>
+        //         <td>${produto.categoria}</td>
+        //         <td>${produto.preco.toLocaleString("pt-BR", {
+        //           style: "currency",
+        //           currency: "BRL",
+        //         })}</td>
+        //     </tr>
+        // `;
+
+        // 5. Cria uma linha "tr"
+        const trProduto = document.createElement("tr"); // <tr></tr>
+
+        // 6. Cria as celulas "td" e adiciona na linha
+        const tdNome = document.createElement("td"); // <td></td>
+        tdNome.textContent = produto.nome;
+        trProduto.appendChild(tdNome); // <tr> <td>{produto.nome}</td> </tr>
+
+        const tdCategoria = document.createElement("td");
+        tdCategoria.textContent = produto.categoria;
+        trProduto.appendChild(tdCategoria);
+
+        const tdPreco = document.createElement("td");
+        tdPreco.textContent = produto.preco.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        });
+        trProduto.appendChild(tdPreco);
+ 
+        // 7. Adiciono a linha na tabela
+        tableData.appendChild(trProduto)
+
+        form.reset();
+      }
+
+      // Busca o Formulário "form"
+      const formProduto = document.getElementById("produtos-form");
+
+      // Adiciona o evento de Submit
+      // Exemplo: form.addEventListener('submit', handleCadastrarProduto)
+      formProduto.addEventListener("submit", handleCadastrarProduto);
     </script>
   </body>
 </html>
